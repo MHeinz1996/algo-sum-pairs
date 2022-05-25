@@ -10,7 +10,3 @@ def sum_pairs(ls, target):
         return("unable to find pairs")
     else:
         return sums
-
-print(sum_pairs([1, 2, 3, 4, 5], 9))
-print(sum_pairs([1,2,3,4,5], 7))
-print(sum_pairs([3, 1, 5, 8, 2], 27))
