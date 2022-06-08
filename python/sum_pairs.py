@@ -10,3 +10,22 @@ def sum_pairs(ls, target):
         return("unable to find pairs")
     else:
         return sums
+
+# Big O == O(n) because hashmap only has to loop through the list once.
+def hashmap_sum_pairs(ls, target):
+    hashmap = {}
+    sums = []
+
+    # hash logic
+    for i, n in enumerate(ls):
+        diff = (target - n)
+        if diff in hashmap:
+            sums.append([diff, n])
+            hashmap[n] = i
+        else:
+            hashmap[n] = i
+            
+    if len(sums) != 0:
+        return sorted(sums)
+    else:
+        return("unable to find pairs")
